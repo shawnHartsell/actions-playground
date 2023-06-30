@@ -1,0 +1,13 @@
+name: CI
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  prod-check:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "running $GITHUB_REF"
+      - run: echo server url is ${{ github.server_url }}
+      - run: echo api url is ${{ github.api_url }}
+      - run: echo graphql url is ${{ github.graphql_url }}
