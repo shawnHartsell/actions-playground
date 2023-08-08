@@ -6,4 +6,4 @@ jobs:
   say-hi:
     runs-on: ubuntu-latest
     steps:
-    - run: hi from workflow-a copy!
+    - run: echo "hi from workflow-a copy!"
