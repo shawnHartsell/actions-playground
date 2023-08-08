@@ -4,6 +4,6 @@ on:
   workflow_dispatch:
 jobs:
   say-hi:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - run: hi from workflow-a copy!
