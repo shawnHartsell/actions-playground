@@ -1,0 +1,9 @@
+name: workflow-a
+run-name: a copy of workflow a to mess with runs_on events
+on:
+  workflow_dispatch:
+jobs:
+  say-hi:
+    runs-on: unbuntu-latest
+    steps:
+    - run: hi from workflow-a copy!
