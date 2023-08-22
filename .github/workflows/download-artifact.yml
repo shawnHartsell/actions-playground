@@ -18,6 +18,7 @@ jobs:
           gh run download 5942149259 --repo shawnHartsell/actions-playground --dir artifacts
           ls
           cd artifacts
+          ls
           cat hello-world.txt
 
         
