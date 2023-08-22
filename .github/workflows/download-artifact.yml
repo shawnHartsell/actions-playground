@@ -10,10 +10,12 @@ jobs:
         run: |
           gh api repos/shawnHartsell/actions-playground/actions/artifacts
       
+      # https://cli.github.com/manual/gh_run_download
+      # alternatively, gh api can be used as well as curl
       - name: download hello-world artifact
         run: |
-          gh api repos/shawnHartsell/actions-playground/actions/artifacts/877227176/zip
-      
+          gh run download 5942149259
+          
       - name: unzip the artifact and print contents
         run: |
           unzip hello-world.zip
