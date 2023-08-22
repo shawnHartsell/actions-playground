@@ -1,0 +1,20 @@
+name: Upload artifact example
+on:
+  workflow_dispatch:
+jobs:
+  upload-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create tmp dir
+        run: mkdir tmp
+      - name: create hello-world.tx
+        run: echo hello > /tmp/hello-world.txt
+      - name: upload as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: hello-world-artifact
+          path: /tmp/hello-world.txt
+          if-no-files-found: error
+  
+    
+  
