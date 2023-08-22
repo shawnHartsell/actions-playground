@@ -15,12 +15,9 @@ jobs:
       # alternatively, gh api can be used as well as curl
       - name: download hello-world artifact
         run: |
-          gh run download 5942149259 --repo shawnHartsell/actions-playground 
-          
-      - name: unzip the artifact and print contents
-        run: |
-          unzip hello-world.zip
-          ls -l
+          gh run download 5942149259 --repo shawnHartsell/actions-playground --dir artifacts
+          ls
+          cd artifacts
           cat hello-world.txt
 
         
