@@ -19,6 +19,7 @@ jobs:
           ls
           cd artifacts
           ls
+          cd hello-world-artifact
           cat hello-world.txt
 
         
