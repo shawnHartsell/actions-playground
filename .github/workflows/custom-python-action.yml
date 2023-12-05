@@ -1,0 +1,27 @@
+name: 'Custom Action Using Python'
+on:
+  workflow_dispatch:
+jobs:
+  train-and-save:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      # TODO (shawnHartsell): temporarily disabling to quickly test custom action integration   
+      # - name: setup conda environment
+      #   uses: conda-incubator/setup-miniconda@v3
+      #   with:
+      #     activate-environment: ml_example
+      #     environment-file: env.yaml
+      #     auto-activate-base: false
+      # - run: |
+      #     conda info
+      #     conda list
+     # TODO (shawnHartsell): push release to action on condition     
+      - name: run train and push custom action
+        uses: shawnHartsell/ghml-train-push-action@main
+      # - name: Run training script
+      #   run: python train.py
