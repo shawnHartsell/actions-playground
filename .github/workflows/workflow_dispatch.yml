@@ -24,5 +24,7 @@ jobs:
   dump-event:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event }}
-      - run: echo ${{ inputs }}
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
