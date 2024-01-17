@@ -21,7 +21,7 @@ on:
         type: environment
       
 jobs:
-  check-bats-version:
+  dump-event:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ github.event }}
