@@ -22,24 +22,6 @@ on:
       bad-field:
         description: 'field with bad typet'
         type: taco
-      bad-field1:
-        description: 'field with bad typet'
-        type: taco
-      bad-field2:
-        description: 'field with bad typet'
-        type: taco
-      bad-field3:
-        description: 'field with bad typet'
-        type: taco
-      bad-field4:
-        description: 'field with bad typet'
-        type: taco
-      bad-field5:
-        description: 'field with bad typet'
-        type: taco
-      bad-field6:
-        description: 'field with bad typet'
-        type: taco
       
 jobs:
   dump-event:
