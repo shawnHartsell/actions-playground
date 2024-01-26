@@ -19,9 +19,9 @@ on:
       environment:
         description: 'Environment to run tests against'
         type: environment
-      bad-field:
-        description: 'field with bad typet'
-        type: taco
+      app-to-deploy:
+        description: 'field with bad type'
+        type: deployment-bundle
       
 jobs:
   dump-event:
