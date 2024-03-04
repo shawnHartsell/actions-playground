@@ -23,6 +23,8 @@ on:
       app-to-deploy:
         description: 'field with bad type'
         type: deployment-bundle
+      app-to-deploy1:
+        type: deployment-bundle
       
 jobs:
   dump-event:
